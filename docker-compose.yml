@@ -1,0 +1,18 @@
+version: '3'
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+    - "16672:15672"
+    - "6672:5672"
+  PostgreSQL:
+    image: sameersbn/postgresql:9.6-2
+    ports:
+        - "5532:5432"
+    environment:
+        - DB_USER=sender
+        - DB_PASS=sender
+        - DB_NAME=test_db
+    volumes:
+        - /srv/docker/postgresql:/var/lib/postgresql
+
