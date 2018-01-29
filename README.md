@@ -27,3 +27,29 @@
   ]
 }
 ```
+## Запуск окружения:
+Запуск моков http-сервисов
+```
+cd /proxy_sender/sender/mock_services
+python http_services.py
+```
+Запуск мока поставщика сообщений
+```
+cd /proxy_sender/sender/mock_services
+python tasks_maker.py
+```
+Инициализация БД
+```
+cd /proxy_sender/sender
+python db_init.py
+```
+Запуск подписчика
+```
+cd /proxy_sender/sender
+python consumer.py
+```
+Запуск стартера
+```
+cd /proxy_sender/sender
+python starter.py
+```
